@@ -1,0 +1,13 @@
+<div class="column page">
+    <span class="titulo">Galeria de pokemons</span>
+    <div class="row carrossel">
+        <div *ngFor="let pokemon of pokemons.results">
+            <mat-card>
+                <mat-card-header><span class="tituloCard">{{tratarNome(pokemon.name)}}</span></mat-card-header>
+                <mat-card-content>
+                    <img [src]="buscarImagem(pokemon.url)">
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5%;
+    margin-bottom: 20px;
+}
+
+mat-card {
+    background-color: #525252;
+    width: 130px;
+    height: 120px;
+    margin-left: 5px;
+}
+
+mat-card:hover {
+    background-color: #FFF;
+}
+
+.tituloCard {
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+mat-card:hover .tituloCard {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.carrossel {
+    margin-left: 5%;
+    width: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+img {
+    position: relative;
+    left: 20px;
+    border-radius: 100%;
+}
