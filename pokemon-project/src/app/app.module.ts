@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { HomeComponent } from './components/home/home.component';
 import { ModalDetalhesComponent } from './modais/modal-detalhes/modal-detalhes.component';
+import { DetalhesPokemonComponent } from './components/detalhes-pokemon/detalhes-pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ModalDetalhesComponent
+    ModalDetalhesComponent,
+    DetalhesPokemonComponent
   ],
   imports: [
     BrowserModule,

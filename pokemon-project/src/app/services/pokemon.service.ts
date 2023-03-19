@@ -19,4 +19,8 @@ export class PokemonService {
   urlImagem(idPokemon: any) {
     return `${this.images}/${idPokemon}.png`
   }
+
+  requisicaoPorURL(url: string): Observable<any> {
+    return this.http.get<any>(url);
+  }
 }

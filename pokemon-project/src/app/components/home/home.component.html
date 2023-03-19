@@ -1,7 +1,11 @@
 <div class="column page">
     <span class="titulo">Galeria de pokemons</span>
+    <mat-form-field appearance="outline">
+        <mat-icon matPrefix style="margin-left:3px;">search</mat-icon>
+        <input matInput type="text" placeholder="Buscar" (keyup)="filtrarPokemon($event)">
+    </mat-form-field>
     <div class="row carrossel">
-        <div *ngFor="let pokemon of pokemons.results">
+        <div *ngFor="let pokemon of pokemonsFiltrados" (click)="selecionarPokemon(pokemon)">
             <mat-card>
                 <mat-card-header><span class="tituloCard">{{tratarNome(pokemon.name)}}</span></mat-card-header>
                 <mat-card-content>
@@ -10,4 +14,5 @@
             </mat-card>
         </div>
     </div>
+    <app-detalhes-pokemon *ngIf="mostrarDetalhes" [urlImagem]="buscarImagem(pokemonSelecionado.url)" [pokemon]="pokemonSelecionado"></app-detalhes-pokemon>
 </div>
