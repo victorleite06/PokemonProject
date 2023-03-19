@@ -1,7 +1,6 @@
 .titulo {
     font-size: 20px;
     font-weight: 600;
-    margin-left: 5%;
     margin-bottom: 20px;
 }
 
@@ -31,7 +30,6 @@ mat-card:hover .tituloCard {
 }
 
 .carrossel {
-    margin-left: 5%;
     width: 90%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -45,6 +43,5 @@ img {
 }
 
 mat-form-field {
-    margin-left: 5%;
     width: 200px;
 }

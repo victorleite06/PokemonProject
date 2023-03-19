@@ -10,10 +10,12 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 })
 export class HomeComponent implements OnInit {
 
-  pokemons: Pokemons = new Pokemons();
+  geracoes: any[] = [];
+  pokemons: any[] = [];
   pokemonsFiltrados: any[] = []
   pokemonSelecionado: PokemonSimples = new PokemonSimples();
   mostrarDetalhes: boolean = false;
+  todasGeracoes: boolean = true
 
   constructor(
     private pokemonService: PokemonService
@@ -26,22 +28,26 @@ export class HomeComponent implements OnInit {
   buscarPokemons() {
     this.pokemonService.buscarTodosPokemons().subscribe({
       next: res => {
-        this.pokemons = res
-        this.pokemonsFiltrados = res.results
+        console.log(res)
+        res.results.forEach((poke: any) => {
+          let aux = {
+            name: poke.name.substring(0,1).toUpperCase() + poke.name.substring(1),
+            url: poke.url,
+            id: poke.url.split("/").at(6)
+          }
+          this.pokemons.push(aux)
+        });
+        this.pokemonsFiltrados = this.pokemons
       }
     })
   }
 
-  filtrarPokemon(event: any) {
-    this.pokemonsFiltrados = this.pokemons.results.filter(p => p.name.toLowerCase().includes(event.target.value.toLowerCase()))
+  searchPokemon(event: any) {
+    this.pokemonsFiltrados = this.pokemons.filter(p => p.name.toLowerCase().includes(event.target.value.toLowerCase()))
   }
 
-  tratarNome(nome: string) {
-    return nome.substring(0,1).toUpperCase() + nome.substring(1)
-  }
-
-  buscarImagem(url: string) {
-    return this.pokemonService.urlImagem(url.split("/").at(6))
+  buscarImagem(id: any) {
+    return this.pokemonService.urlImagem(id)
   }
 
   selecionarPokemon(pokemon: PokemonSimples) {

@@ -9,6 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .page {
     margin-top: 20px;
+    margin-left: 5%;
 }
 
 *::-webkit-scrollbar {
@@ -35,4 +36,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .row {
     display: flex;
     flex-direction: row;
+}
+
+mat-divider {
+    border: 1px solid black;
 }
