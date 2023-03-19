@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { PokemonSimples } from 'src/app/model/pokemonSimples';
 import { Pokemons } from 'src/app/model/pokemons';
 import { PokemonService } from 'src/app/services/pokemon.service';
@@ -34,7 +33,7 @@ export class HomeComponent implements OnInit {
   }
 
   filtrarPokemon(event: any) {
-    this.pokemonsFiltrados = this.pokemons.results.filter(p => p.name.toLowerCase().includes(event.target.value))
+    this.pokemonsFiltrados = this.pokemons.results.filter(p => p.name.toLowerCase().includes(event.target.value.toLowerCase()))
   }
 
   tratarNome(nome: string) {
