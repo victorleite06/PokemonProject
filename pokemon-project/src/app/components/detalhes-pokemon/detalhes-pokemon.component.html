@@ -1,12 +1,12 @@
-<div class="column" style="width: 90%;">
-    <mat-card>
+<div class="column">
+    <mat-card style="max-width: 905px;">
         <mat-card-header style="margin-left: -30px;">
             <div class="row">
                 <img [src]="urlImagem">
                 <span style="margin-top: 20px;">{{tratarNome(pokemon.name)}}</span>
             </div>
         </mat-card-header>
-        <mat-card-content>
+        <mat-card-content style="overflow-x: auto;">
             <div class="row">
                 <div *ngFor="let status of detalhes.stats" style="margin-left: 5px;">
                     <div class="row">

@@ -30,7 +30,6 @@ mat-card:hover .tituloCard {
 }
 
 .carrossel {
-    width: 90%;
     overflow-x: auto;
     overflow-y: hidden;
     margin-bottom: 30px;

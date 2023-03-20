@@ -28,5 +28,5 @@ button {
     padding-right: 10px;
     margin-right: 13px;
     margin-top: 20px;
-    height: 50px;
+    min-height: 50px;
 }

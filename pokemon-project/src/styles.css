@@ -10,6 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .page {
     margin-top: 20px;
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 *::-webkit-scrollbar {
