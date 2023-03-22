@@ -33,4 +33,20 @@ export class DetalhesPokemonComponent implements OnChanges {
   tratarNome(nome: string) {
     return nome.substring(0,1).toUpperCase() + nome.substring(1)
   }
+
+  openModalHabilidades(abilities: any) {
+
+  }
+
+  openModalAtaques(moves: any) {
+    
+  }
+
+  openModalJogos(game_indices: any) {
+    
+  }
+
+  openModalAreaEncontro(location_area_encounters: any) {
+    
+  }
 }
