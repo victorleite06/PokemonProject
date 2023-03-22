@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   buscarPokemons() {
     this.pokemonService.buscarTodosPokemons().subscribe({
       next: res => {
-        console.log(res)
         res.results.forEach((poke: any) => {
           let aux = {
             name: poke.name.substring(0,1).toUpperCase() + poke.name.substring(1),
