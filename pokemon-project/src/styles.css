@@ -39,6 +39,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     flex-direction: row;
 }
 
+.tituloModal {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 mat-divider {
     border: 1px solid black;
 }

@@ -1,1 +1,13 @@
-<p>modal-habilidades works!</p>
+<div class="column" style="height: 95%; margin-top: 2.5%;">
+    <span class="tituloModal">Abilities</span>
+    <div *ngFor="let ability of data.abilities" style="margin-bottom: 10px;">
+        <mat-card>
+            <mat-card-header>
+                <span>{{tratarNome(ability.ability.name)}}</span>
+            </mat-card-header>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
