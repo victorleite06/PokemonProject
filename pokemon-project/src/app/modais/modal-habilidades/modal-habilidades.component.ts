@@ -18,7 +18,6 @@ export class ModalHabilidadesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.data)
     this.buscarDetalhesHabilidades(this.data.abilities, 0)
   }
 
@@ -29,12 +28,27 @@ export class ModalHabilidadesComponent implements OnInit {
         if(abilities[cont + 1]) {
           this.buscarDetalhesHabilidades(abilities, cont + 1)
         }
-        console.log(this.detalhesHabilidades)
       }
     })
   }
 
   tratarNome(name: string) {
     return name.substring(0, 1).toUpperCase() + name.substring(1)
+  }
+
+  buscarEfeitosHabilidade(habilidadeNome: string) {
+    let detalhe = this.detalhesHabilidades.filter(d => d.name.includes(habilidadeNome))[0]
+    let effectFiltered = detalhe.effect_entries.filter((de: any) => de.language.name.includes('en'))[0]
+    return effectFiltered.effect
+  }
+
+  buscarPokemons(habilidadeNome: string) {
+    let detalhe = this.detalhesHabilidades.filter(d => d.name.includes(habilidadeNome))[0]
+    return detalhe.pokemon
+  }
+
+  buscarURLImgemPokemon(pokemon: any) {
+    let id = pokemon.url.split("/").at(6)
+    return this.pokemonService.urlImagem(id);
   }
 }

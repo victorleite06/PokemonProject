@@ -3,10 +3,21 @@
     <div *ngFor="let ability of data.abilities" style="margin-bottom: 10px;">
         <mat-card>
             <mat-card-header>
-                <span>{{tratarNome(ability.ability.name)}}</span>
+                <span class="tituloCard">{{tratarNome(ability.ability.name)}}</span>
             </mat-card-header>
             <mat-card-content>
-
+                <div class="column" style="margin-top: 10px; padding-left: 15px; padding-right: 15px;">
+                    <div class="row">
+                        <span style="color: rgb(168, 24, 24); font-weight: 500;">Effect: </span>
+                        <span>{{buscarEfeitosHabilidade(ability.ability.name)}}</span>
+                    </div>
+                    <span style="color: rgb(63, 63, 176); font-weight: 500; margin-top: 10px;">Pokemons: </span>
+                    <div class="row" style="overflow-x: auto; margin-bottom: 20px;">
+                        <div *ngFor="let pokemon of buscarPokemons(ability.ability.name)">
+                            <img matTooltip="{{pokemon.pokemon.name}}" [src]="buscarURLImgemPokemon(pokemon.pokemon)">
+                        </div>
+                    </div>
+                </div>
             </mat-card-content>
         </mat-card>
     </div>

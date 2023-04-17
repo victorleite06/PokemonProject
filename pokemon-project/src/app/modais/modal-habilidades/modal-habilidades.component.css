@@ -5,3 +5,12 @@ mat-card {
     padding-left: 6px;
     padding-right: 6px;
 }
+
+.tituloCard {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+img {
+    width: 60px;
+}
