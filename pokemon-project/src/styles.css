@@ -45,6 +45,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-bottom: 20px;
 }
 
+.tituloCard {
+    font-size: 15px;
+    font-weight: 600;
+}
+
 mat-divider {
     border: 1px solid black;
+}
+
+mat-card {
+    box-shadow: none;
+    border: 1px solid #525252;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 6px;
 }
